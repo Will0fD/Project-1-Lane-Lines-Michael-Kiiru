@@ -154,10 +154,10 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
+| Bicycle Crossing      		| Road work   									| 
+| Road work     			| Speed limit (80km/h)										|
+| Speed limit (50km/h)				| Speed limit (30km/h)											|
+| Go straight or left     		| Go straight or left					 				|
 | Slippery Road			| Slippery Road      							|
 
 
@@ -171,11 +171,49 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
+| .60         			| Road work   									| 
+| .20     				| Speed limit (80km/h)	 										|
+| .05					| Speed limit (30km/h)											|
+| .04	      			| Go straight or left					 				|
 | .01				    | Slippery Road      							|
 
 
-For the second image ... 
+For the second image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Road work   									| 
+| .20     				| Speed limit (80km/h)	 										|
+| .05					| Speed limit (30km/h)											|
+| .04	      			| Go straight or left					 				|
+| .01				    | Slippery Road      							|
+
+For the third image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Road work   									| 
+| .20     				| Speed limit (80km/h)	 										|
+| .05					| Speed limit (30km/h)											|
+| .04	      			| Go straight or left					 				|
+| .01				    | Slippery Road      							|
+
+For the fourth image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Road work   									| 
+| .20     				| Speed limit (80km/h)	 										|
+| .05					| Speed limit (30km/h)											|
+| .04	      			| Go straight or left					 				|
+| .01				    | Slippery Road      							|
+
+For the fifth image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Road work   									| 
+| .20     				| Speed limit (80km/h)	 										|
+| .05					| Speed limit (30km/h)											|
+| .04	      			| Go straight or left					 				|
+| .01				    | Slippery Road      							|
