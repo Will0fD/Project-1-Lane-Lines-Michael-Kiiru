@@ -20,8 +20,6 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./google_pics/50.jpg "Traffic Sign 1"
 [image5]: ./google_pics/bike_crossing.jpg  "Traffic Sign 2"
 [image6]: ./google_pics/road_work.jpg  "Traffic Sign 3"
@@ -68,12 +66,6 @@ The code for this step is contained in the fourth code cell of the IPython noteb
 
 As a first step, I decided to convert the images to grayscale because ...
 
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
-
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 The code for splitting the data into training and validation sets is contained in the fifth code cell of the IPython notebook.  
@@ -84,9 +76,6 @@ My final training set had X number of images. My validation set and test set had
 
 The sixth code cell of the IPython notebook contains the code for augmenting the data set. I decided to generate additional data because ... To add more data to the the data set, I used the following techniques because ... 
 
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
 
 The difference between the original data set and the augmented data set is the following ... 
 
