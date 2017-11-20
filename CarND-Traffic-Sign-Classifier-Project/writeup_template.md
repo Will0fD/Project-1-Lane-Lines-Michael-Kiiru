@@ -90,35 +90,43 @@ My final model consisted of the following layers:
 | Fully connected  | Outputs 84                |
 | RELU     |     Activation       |
 | Fully connected  | Outputs 43                |
+| Softmax  |             |
 
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the eigth cell of the ipython notebook. 
+The code for training the model is located in the ninth, tenth, and eleventh cells of the ipython notebook. 
 
-To train the model, I used an ....
+To train the model, I used an Adam optimizer, batch size of 128, 10 epochs, a learning rate of 0.001.
 
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
+The code for calculating the accuracy of the model is located in the eleventh and twelfth cells of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 96.4% 
+* test set accuracy of 89.9%
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+* What was the first architecture that was tried and why was it chosen? 
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+The first architecture that was chosen was Lenet because it was convenient to start with what was initially given.
+
+* What were some problems with the initial architecture?
+
+It seemed to cap out at a validation accuracy of ~96% and it didn't cross  90% until the 4th epoch.
+
+* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
+I had a high validation accuracy but a low testing accuracy. I experimented with adding pooling and dropout layers to deal with the overfitting. My metric of improved performance before I checked the testing accuracy was in which epoch did the validation accuracy cross 90%.
+
+* Which parameters were tuned? How were they adjusted and why?
+
+After 5 or 6 iterations of trying larger and smaller rates, a learning rate of 0.001 gave me the best performance.
+
+* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model? 
+
+I chose to add more convolutional layers in order to pick up more features and complexity in the data. I also decided to add pooling and dropout layers to deal with the overfitting issues that my network was experiencing.
 
 ###Test a Model on New Images
 
@@ -136,7 +144,7 @@ Here are five German traffic signs that I found on the web:
 
 ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The second image might be difficult to classify because of the rotation of the sign. The 3rd image has trees and vegetation in the background that may add complications, and the 2nd through the 4th all have watermarks as well. 
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
