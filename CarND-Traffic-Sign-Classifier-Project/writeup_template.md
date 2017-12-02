@@ -167,7 +167,7 @@ The model was able to correctly guess 2 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the sixteenth & seventeenth cells of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a Road work sign (probability of 0.6), but the image contains a Bicycle crossing sign. The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a Road work sign (probability of 0.9987), but the image contains a Bicycle crossing sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -178,7 +178,7 @@ For the first image, the model is relatively sure that this is a Road work sign 
 | 3.609e-05				    | Dangerious curve to the right      							|
 
 
-For the second image, the model is relatively sure that this is a Speed limit (80km/h) sign (probability of 0.6), but the image contains a Road work sign. The top five soft max probabilities were
+For the second image, the model is relatively sure that this is a Speed limit (80km/h) sign (probability of 0.9942), but the image contains a Road work sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -188,17 +188,17 @@ For the second image, the model is relatively sure that this is a Speed limit (8
 | 7.053e-03	      			| Road work					 				|
 | 7.003e-03				    | No passing for vehicles over 3.5 metric tons		|
 
-For the third image, the model is relatively sure that this is a Speed limit (30km/h) sign (probability of 0.6), but the image contains a Speed limit (50km/h)  sign. The top five soft max probabilities were
+For the third image, the model is relatively sure that this is a Speed limit (30km/h) sign (probability of 0.9314), but the image contains a Speed limit (50km/h)  sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Speed limit (30km/h)   									| 
-| .20     				| Speed limit (80km/h)	 										|
-| .05					| Speed limit (20km/h)											|
-| .04	      			| Speed limit (50km/h)				 				|
-| .01				    | Speed limit (60km/h)     							|
+| 9.314e-01       			| Speed limit (30km/h)   									| 
+| 6.831e-02     				| Speed limit (80km/h)	 										|
+| 2.051e-04					| Speed limit (20km/h)											|
+| 3.025e-05      			| Speed limit (50km/h)				 				|
+| 1.853e-05				    | Speed limit (60km/h)     							|
 
-For the fourth image, the model is relatively sure that this is a Go straight or left sign (probability of 0.6), and the image does contain a Go straight or left sign. The top five soft max probabilities were
+For the fourth image, the model is relatively sure that this is a Go straight or left sign (probability of 0.9999999), and the image does contain a Go straight or left sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -208,7 +208,7 @@ For the fourth image, the model is relatively sure that this is a Go straight or
 | 5.636e-11	      			| Keep left					 				|
 | 3.569e-11				    | Turn left ahead      							|
 
-For the fifth image, the model is relatively sure that this is a Slippery road sign (probability of 0.6), and the image does contain a Slippery road sign. The top five soft max probabilities were
+For the fifth image, the model is relatively sure that this is a Slippery road sign (probability of 0.9998), and the image does contain a Slippery road sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
