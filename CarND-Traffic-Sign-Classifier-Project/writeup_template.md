@@ -171,22 +171,22 @@ For the first image, the model is relatively sure that this is a Road work sign 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Road work   									| 
-| .20     				| Speed limit (60km/h)	 										|
-| .05					| Speed limit (80km/h)											|
-| .04	      			| Speed limit (20km/h)					 				|
-| .01				    | Dangerious curve to the right      							|
+| 9.987e-01         			| Road work   									| 
+| 6.028e-04     				| Speed limit (60km/h)	 										|
+| 5.275e-04					| Speed limit (80km/h)											|
+| 5.724e-05	      			| Speed limit (20km/h)					 				|
+| 3.609e-05				    | Dangerious curve to the right      							|
 
 
 For the second image, the model is relatively sure that this is a Speed limit (80km/h) sign (probability of 0.6), but the image contains a Road work sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Speed limit (80km/h)   									| 
-| .20     				| Wild animals crossing	 										|
-| .05					| Bicycles crossing											|
-| .04	      			| Road work					 				|
-| .01				    | No passing for vehicles over 3.5 metric tons		|
+| 9.942e-01       			| Speed limit (80km/h)   									| 
+| 2.340e-02     				| Wild animals crossing	 										|
+| 2.101e-02					| Bicycles crossing											|
+| 7.053e-03	      			| Road work					 				|
+| 7.003e-03				    | No passing for vehicles over 3.5 metric tons		|
 
 For the third image, the model is relatively sure that this is a Speed limit (30km/h) sign (probability of 0.6), but the image contains a Speed limit (50km/h)  sign. The top five soft max probabilities were
 
@@ -202,18 +202,18 @@ For the fourth image, the model is relatively sure that this is a Go straight or
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Go straight or left   									| 
-| .20     				| Roundabout mandatory	 										|
-| .05					| Keep right											|
-| .04	      			| Keep left					 				|
-| .01				    | Turn left ahead      							|
+| 9.999999e-01         			| Go straight or left   									| 
+| 1.083e-07     				| Roundabout mandatory	 										|
+| 5.057e-09					| Keep right											|
+| 5.636e-11	      			| Keep left					 				|
+| 3.569e-11				    | Turn left ahead      							|
 
 For the fifth image, the model is relatively sure that this is a Slippery road sign (probability of 0.6), and the image does contain a Slippery road sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Slippery Road 							| 
-| .20     				| Children crossing	 										|
-| .05					| Beware of ice/snow											|
-| .04	      			| Dangerious curve to the right					 				|
-| .01				    | Bicycles crossing	      							|
+| 9.998e-01         			| Slippery Road 							| 
+| 9.635e-05     				| Children crossing	 										|
+| 5.121e-05				| Beware of ice/snow											|
+| 3.359e-05	      			| Dangerious curve to the right					 				|
+| 2.331e-05				    | Bicycles crossing	      							|
