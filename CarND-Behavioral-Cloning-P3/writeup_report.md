@@ -36,7 +36,8 @@ My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
-* writeup_report.md or writeup_report.pdf summarizing the results
+* writeup_report.md summarizing the results
+* video.mp4 (a video recording of my vehicle driving autonomously around the track for at least one full lap)
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -52,9 +53,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+I used the model architecture published by the autonomous vehicle team at NVIDIA which consists of a normalization layer, followed by 5 convolutional layers, followed by 4 fully connected layers. The convolution neural network has 5x5 for the first 3 filter sizes with strides of (2,2) each and 3x3 filter sizes for the last 2, and filter depths between 24 and 64 (model.py lines 49-67).
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The model includes RELU layers to introduce nonlinearity (model.py lines 55-59), and the data is normalized in the model using a Keras lambda layer (model.py line 52). 
 
 #### 2. Attempts to reduce overfitting in the model
 
