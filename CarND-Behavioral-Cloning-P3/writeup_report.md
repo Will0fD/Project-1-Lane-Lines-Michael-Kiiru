@@ -91,7 +91,20 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 49-67) consisted of a convolution neural network with the following layers and layer sizes:
+
+* normalization layer (-0.5 to 0.5)
+* cropping functions (removes top 70 pixels and bottom 25 pixels)
+* 5x5 convolutional layer (filter depth 24, stride of (2,2), relu activation)
+* 5x5 convolutional layer (filter depth 36, stride of (2,2), relu activation)
+* 5x5 convolutional layer (filter depth 48, stride of (2,2), relu activation)
+* 3x3 convolutional layer (filter depth 64, relu activation)
+* 3x3 convolutional layer (filter depth 64, relu activation)
+* flatten layer function
+* fully connected layer (100 neurons)
+* fully connected layer (50 neurons)
+* fully connected layer (10 neurons)
+* fully connected layer (1 neurons)
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
@@ -99,11 +112,11 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded 3 laps on track one using center lane driving, and a partial lap on track two using right lane driving. Here is an example image of center lane driving:
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to avoid hitting the wall. These images show what a recovery looks like starting from ... :
 
 ![alt text][image3]
 ![alt text][image4]
@@ -111,16 +124,13 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data set, I also flipped images and angles thinking that this would remove the counter-clockwise driving bias. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
+After the collection process, I had 6 times the number of data points (38572 images total). I then preprocessed this data by cropping the images to get rid of the top 70 pixels (sky and trees) and bottom 25 pixels (hood of car) that wouldn't help train the model on the pixels that included the road.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as evidenced by the increase in loss on the 6th epoch. I used an adam optimizer so that manually training the learning rate wasn't necessary.
